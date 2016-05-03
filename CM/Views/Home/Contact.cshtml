@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+<h2>@ViewBag.Title.</h2>
+
+    OU Care Management<br /><br />
+    For additional information to see how we can help you and your loved ones, please complete form below or call our toll free number.   The initial consultation is free and you are under no obligation.
+
+<address>
+
+    <abbr title="Phone"></abbr>
+    <strong>Call us:</strong> 1.866.416.4980 (toll free)
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+    <!-- for send out the form.-->
+<div id="formSection">
+    <h3>@ViewBag.ReportMessage</h3>
+    <form method="post" id="contactForm">    
+        <textarea name="message" id="message" maxlength="150" data-bind="value:message, valueUpdate:'input'"></textarea>
+        <input type="submit" value="Send" />
+        <span data-bind="text:charactersRemaining"></span> characters remaining
+    </form>
+    <img src="~/Content/Image/wait_progress.gif" id="progress" style="display:none" />
+</div>
+
+@section scripts  
+{
+    <script src="~/Scripts/knockout-3.4.0.debug.js"></script> 
+    <script>
+        function ContactViewModel()
+        {
+            var self = this;
+            self.message = ko.observable('');
+            self.charactersRemaining = ko.computed(function () {
+                return 150-self.message().length;
+            })
+        }
+        ko.applyBindings(new ContactViewModel);
+    </script>
+
+    <script>
+        $('#contactForm').submit(function () {
+            $('#progress').show();
+            $.post('', {message:$('#message').val() })
+                .done(function(response) {
+                    setTimeout(function () { $('#formSection').html(response); }, 2000);
+            });
+        return false;
+    });
+    </script>
+}
+
+@*
+        <!-- for send out the form.-->
+        <div id="formSection">
+            <h3>@ViewBag.ReportMessage</h3>
+            @using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "post", InsertionMode = InsertionMode.Replace, UpdateTargetId = "formSection"}))
+            {
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send" />
+            }
+        </div>
+
+    @section scripts {
+        <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    }
+*@
+  

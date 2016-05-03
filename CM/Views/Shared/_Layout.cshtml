@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Care Management</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+@*
+    <div id="header">
+        <div id="dnn_headerMods" class="DNNEmptyPane"></div>
+
+        <style type="text/css">
+            .headerimage a.desktop {
+                background-image: url(/portals/1315/site_logo_main.png);
+                background-repeat: no-repeat;
+            }
+
+            .headerimage a.mobile {
+                background-image: url(/portals/1315/site_logo_main-Mobile.png);
+                background-repeat: no-repeat;
+            }
+        </style>
+        <div class="headerimage">
+            <a href="http://oucaremanagement.com" aria-label="OU Care Management" class="siteLogo desktop">
+
+            </a>
+            <a href="http://oucaremanagement.com" aria-label="OU Care Management" class="siteLogo mobile">
+
+            </a>
+        </div>
+    </div>
+    <div id="mainnav_bkgrd">
+        <div id="mainnav">
+            <div class="gradient navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+
+                        <!-- START searchbox area -->
+                        <div id="searchboxMobile" class="searchbox mobile">
+
+
+                            <span id="dnn_dnnSearchMobile_ClassicSearch">
+
+
+                                <span class="searchInputContainer" data-moreresults="See More Results" data-noresult="No Results Found">
+                                    <input name="dnn$dnnSearchMobile$txtSearch" type="text" maxlength="255" size="20" id="dnn_dnnSearchMobile_txtSearch" class="NormalTextBox" autocomplete="off" placeholder="Search...">
+                                    <a class="dnnSearchBoxClearText"></a>
+                                </span>
+                                <a id="dnn_dnnSearchMobile_cmdSearch" class="search_button" href="javascript:__doPostBack('dnn$dnnSearchMobile$cmdSearch','')">SEARCH</a>
+                            </span>
+
+
+                            <script type="text/javascript">
+    $(function() {
+        if (typeof dnn != "undefined" && typeof dnn.searchSkinObject != "undefined") {
+            var searchSkinObject = new dnn.searchSkinObject({
+                delayTriggerAutoSearch : 400,
+                minCharRequiredTriggerAutoSearch : 2,
+                searchType: 'S',
+                enableWildSearch: true,
+                cultureCode: 'en-US',
+                portalId: -1
+                }
+            );
+            searchSkinObject.init();
+
+
+            // attach classic search
+            var siteBtn = $('#dnn_dnnSearchMobile_SiteRadioButton');
+            var webBtn = $('#dnn_dnnSearchMobile_WebRadioButton');
+            var clickHandler = function() {
+                if (siteBtn.is(':checked')) searchSkinObject.settings.searchType = 'S';
+                else searchSkinObject.settings.searchType = 'W';
+            };
+            siteBtn.on('change', clickHandler);
+            webBtn.on('change', clickHandler);
+
+
+        }
+    });
+                            </script>
+
+                        </div>
+                        <!-- END searchbox area -->
+
+                        <div id="navToggleWrap">
+                            <button type="button" class="navbar-toggle mobile" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-barText">Menu</span>
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-barWrap">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+
+                            <li class="active">
+
+                                <a href="http://oucaremanagement.com/Home.aspx">Home</a>
+
+                            </li>
+
+                            <li class="">
+
+                                <a href="http://oucaremanagement.com/AboutUs.aspx">About Us</a>
+
+                            </li>
+
+                            <li class="">
+
+                                <a href="http://oucaremanagement.com/HowWeCanHelp.aspx">How  We Can Help</a>
+
+                            </li>
+
+                            <li class="">
+
+                                <a href="http://oucaremanagement.com/FAQ.aspx">FAQ</a>
+
+                            </li>
+
+                            <li class="dropdown ">
+
+                                <a href="http://oucaremanagement.com/CareManagementOverview.aspx">Care Management Overview<b class="glyphicon glyphicon-chevron-down"></b></a>
+
+                                <ul class="dropdown-menu">
+
+                                    <li class="">
+
+                                        <a href="http://oucaremanagement.com/CareManagementOverview/GeriatricCareManagement.aspx">Geriatric Care Management</a>
+
+                                    </li>
+
+                                    <li class="">
+
+                                        <a href="http://oucaremanagement.com/CareManagementOverview/DisabilityCareManagement .aspx">Disability Care Management</a>
+
+                                    </li>
+
+                                    <li class="">
+
+                                        <a href="http://oucaremanagement.com/CareManagementOverview/SafetyAssessments.aspx">Safety Assessments</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li class="">
+
+                                <a href="http://oucaremanagement.com/WhatWeDo.aspx">What We Do</a>
+
+                            </li>
+
+                            <li class="">
+
+                                <a href="http://oucaremanagement.com/ContactUs.aspx">Contact Us</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!--/.navbar-collapse -->
+                </div>
+            </div>
+
+            <!-- END navbar -->
+
+        </div>
+    </div>
+*@
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-8">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/Image/site_logo_main.png" class="img-responsive center-block" />
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @* @@Html.ActionLink("OU CARE MANAGEMENT", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) *@
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("HOME", "Index", "Home")</li>
+                        <li>@Html.ActionLink("ABOUT US", "About", "Home")</li>
+                        <li>@Html.ActionLink("HOW WE CAN HELP", "Help", "Home")</li>
+                        <li>@Html.ActionLink("FAQ", "Faq", "Home")</li>
+                        <li>@Html.ActionLink("CARE MANAGEMENT OVERVIEW", "Overview", "Home")</li>
+                        <li>@Html.ActionLink("WHAT WE DO", "Mission", "Home")</li>
+                        <li>@Html.ActionLink("CONTACT US", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+        @RenderBody()
+        <hr />
+        <footer>
+            <ul>
+                @Html.Partial("_LoginPartial")
+            </ul>
+            <p>&copy; @DateTime.Now.Year - OU College of Nursing - Care Mangement - Case:</p>           
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

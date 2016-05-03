@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Case Manager";
+}
+
+<div class="row">
+    <div class="col-md-4 margin-top-20">
+        <a href="@Url.Action("Details", "Member")" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-list-alt"></span> Member Information</a>
+        <a href="@Url.Action("Statement", "Member", new { ID = ViewBag.MemberId})" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-list-alt"></span> Report 1</a>
+        <a href="#" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-list-alt"></span> Report 5</a>
+    </div>
+    <div class="col-md-4 margin-top-20">
+        <a href="@Url.Action("Update", "UpdateMemberInformation", new { MemberId=ViewBag.MemberId})" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-edit"></span> Update Member Information</a>
+        <a href="#" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-list-alt"></span> Report 4</a>
+        <a href="#" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-list-alt"></span> Report 6</a>
+    </div>
+    <div class="col-md-4 margin-top-20"></div>
+    <div class="col-md-4 margin-top-20"></div>
+</div>
+
+@ViewBag.Pin
+
+@*
+
+    You are using @Request.Browser.Browser, and that's OK. Email us at support@oucaremanagement.com if you have any question.
+
+    @{ var amounts = new List<Decimal> { 100, 25.50m, -40, 275.99m };}
+    <ur>
+        @foreach (decimal amount in amounts)
+        {
+            <li>@formatAmount(amount)</li>
+            <text>plian text</text>
+            @: test.
+        }
+    </ur>
+
+    @helper formatAmount(decimal amount)
+        {
+            var color = "green";
+            if (amount < 0) { color = "red"; }
+            <span style="color:@color">@String.Format("{0:c}", amount) </span>
+        }
+
+*@
